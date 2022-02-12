@@ -336,7 +336,6 @@
                         </li>
                     </ul>
                 </div>
-
             </section>
         </main>
         <!--подвал-->
@@ -394,22 +393,23 @@
                 </div>  
                 <div class="footer-spam">
                     <div class="container footer-spam-container">
-                        <p class="footer-spam-title title">подпишитесь на рассылку</p>
-                        
+                        <p class="footer-spam-title title">подпишитесь на рассылку</p>                        
                         <form class="footer-form">
                             <div class="footer-spam-input">                                
-                                                       
+                                <label>                    
                                     <input
                                     type="email"
                                     name="spam-email"
                                     placeholder="E-mail"
                                     id="e-mail"
-                                    class="spam-email-input"/>                                      
+                                    class="spam-email-input"
+                                    />
+                                </label>                                        
                             <div class="footer-spam-btn">                                                    
                                 <button type="submit" class="spam-btn">Подписаться</button>
-                                <svg class="spam-icon" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-icon-send"></use>
-                                </svg>
+                                    <svg class="spam-icon" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-icon-send"></use>
+                                    </svg>
                             </div>    
                             </div>  
                         </form>
@@ -418,15 +418,51 @@
             </div>
     </footer>
     <!--модальное окно-->
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-           <button type="button" class="modal-close-btn" data-modal-close>
-            <svg class="modal-close-icon">
-                <use href="./images/icons.svg#icon-Vector-1"></use>
-            </svg>
-           </button> 
-        </div>            
-    </div>
+    
+        <div class="backdrop" data-modal> <!--is-hidden-->
+            <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="modal-close-icon">
+                    <use href="./images/icons.svg#icon-Vector-1"></use>
+                </svg>
+            </button>
+            <p class="modal-title title"> Оставьте свои данные, мы вам перезвоним </p> 
+            <form  class="modal-form">
+                <label>
+                    Имя
+                    <input
+                    type="text"
+                    name="user-name"  
+                    class="modal-input"
+                    required
+                    />
+                </label>
+                <label>
+                    Телефон
+                    <input
+                    type="tel" 
+                    name="user-tel"  
+                    class="modal-input" 
+                    required
+                    />
+                </label>
+                <label>
+                    Почта
+                    <input
+                    type="email" 
+                    name="user-email"  
+                    class="modal-input" 
+                    />
+                </label>
+                <label>
+                    Комментарий
+                    <textarea name="comment" placeholder="Введите текст" ></textarea>
+                </label>
+                <button type="submit" class="modal-btn">Отправить</button>
+            </form>
+            </div>            
+        </div>
+    
 
     <script src="./js/modal.js"></script>
 </body>
