@@ -754,37 +754,29 @@
     font-size: 16px;
     line-height: 1.25;    
     letter-spacing: 0.03em;    
-    }
-
-  .footer-spam-btn {
-    position: relative;    
-    display: flex;
-    padding-top: 10px;  
-  }  
+    }   
       
-  .spam-btn {  
-    display: inline-block;
+  .spam-btn {      
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
     margin-left: 12px;
+    padding: 13px 28px;
     width: 200px;
-    padding: ;
     height: 50px;
     color: var(--accent-filters-color);
     background: var(--accent-color);
+    text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    line-height: 1.87;      
-    align-items: center;
-    text-align: center;
+    line-height: 1.87; 
     letter-spacing: 0.06em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
   }
 
-  .spam-icon {
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);    
+  .spam-icon {    
+    margin-left: 10px;
   }
 
   /*----------modal--------*/
@@ -816,7 +808,8 @@
   .modal-close-icon {
     width: 11px;
     height: 11px;
-    color: #000000;
+    fill: #000000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .modal-close-btn {
@@ -827,8 +820,14 @@
     height: 30px;
     background: var(--accent-filters-color);
     border: 1px solid rgba(0, 0, 0, 0.1);  
-    border-radius: 50%;
+    border-radius: 50%;    
   }
+
+  .modal-close-icon:hover,
+  .modal-close-icon:hover {
+    fill: var(--accent-color);
+  }
+
 
   .modal-title {
     margin-bottom: 30px;
@@ -840,25 +839,6 @@
     letter-spacing: 0.03em;
   }
 
-  .modal-input {
-    padding-left: 12px;
-    width: 100%;
-    height: 40px;    
-    font-size: 14px;  
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-    }
-
-  /*.modal-input::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-  }*/
-
   .modal-input-wrap {
     position: relative;
   }
@@ -868,18 +848,102 @@
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .modal-field {
     margin-bottom: 10px;
   }
 
+  .modal-input {
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;    
+    font-size: 14px;  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+ 
   .modal-input:focus {
     border-color: var(--accent-color);
   }
   
   .modal-input:focus + .modal-icon {
     fill: var(--accent-color);
+  }
+
+  .modal-input::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
+
+  .modal-label {
+    display: flex;
+    margin-bottom: 4px;
+    color: var(--link-list-color);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.16;    
+    letter-spacing: 0.01em;   
+  }
+
+  .modal-comment {
+    display: flex;
+    padding-top: 12px;
+    padding-left: 16px; 
+    width: 100%;
+    height: 120px;
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  .modal-comment::placeholder {     
+    color: rgba(117, 117, 117, 0.5);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  }  
+   
+  .modal-check-text {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: var(--link-list-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
+  .modal-check-text::before {
+    content: '';
+    display: block;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--header-text-color);
+    border-radius: 2px;   
+  }
+
+  .modal-check:checked + .modal-check-text::before {
+    background-color: var(--accent-color);
+  }
+
+  .modal-check-tab {
+    display: inline-block;
+    padding: 5px;
+    color: var(--accent-color);
+    text-decoration: underline;
   }
 
   .backdrop.is-hidden {

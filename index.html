@@ -402,14 +402,12 @@
                                     placeholder="E-mail"
                                     id="e-mail"
                                     class="spam-email-input"
-                                />
-                                                                        
-                            <div class="footer-spam-btn">                                                    
-                                <button type="submit" class="spam-btn">Подписаться</button>
+                                />                                                                                                                                                    
+                                <button type="submit" class="spam-btn">Подписаться
                                     <svg class="spam-icon" width="24" height="24">
                                         <use href="./images/icons.svg#icon-send"></use>
                                     </svg>
-                            </div>    
+                                </button>                                   
                             </div>  
                         </form>
                     </div>
@@ -433,7 +431,8 @@
                         <input
                         type="text"
                         name="user-name"  
-                        class="modal-input"                        
+                        class="modal-input"
+                        id="user-name"                       
                         />
                     <svg class="modal-icon" width="18" height="18">
                         <use href="./images/icons.svg#icon-user-name"></use>
@@ -446,7 +445,8 @@
                         <input
                         type="tel" 
                         name="user-tel"  
-                        class="modal-input"                 
+                        class="modal-input"
+                        id="user-tel"                 
                         />
                     <svg class="modal-icon" width="18" height="18">
                         <use href="./images/icons.svg#icon-user-tel"></use>
@@ -459,16 +459,37 @@
                         <input
                         type="email" 
                         name="user-email"  
-                        class="modal-input" 
+                        class="modal-input"
+                        id="modal-input" 
                         />
                     <svg class="modal-icon" width="18" height="18">
                         <use href="./images/icons.svg#icon-user-email"></use>
                     </svg>
                     </div>     
                 </div>
-                <div class="modal-comment">
-                <label for="comment">Комментарий</label>                    
-                    <textarea name="comment" placeholder="Введите текст" ></textarea>
+                <div class="modal-field">
+                <label for="user-comment" class="modal-label">Комментарий</label>                                    
+                    <textarea
+                     name="user-comment"
+                     id="user-comment"
+                     class="modal-comment"
+                     placeholder="Введите текст" 
+                     ></textarea>                  
+                </div>
+                <div class="modal-field">
+                    <input
+                     type="checkbox"
+                     name="modal-check"
+                     class="modal-check visually-hidden" 
+                     id="modal-check"
+                    />
+                <label for="modal-check" class="modal-check-text">Соглашаюсь с рассылкой и принимаю<span class="modal-check-tab">Условия договора</span>
+                    <span>
+                        <svg>
+                            <use></use>
+                        </svg>
+                    </span>
+                </label>    
                 </div>
                 <button type="submit" class="modal-btn">Отправить</button>
             </form>
