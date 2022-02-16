@@ -9,6 +9,7 @@
     --border-color: #eeeeee;
     --socials-icon-color: #afb1b8;
     --footer-icon-color: rgba(255, 255, 255, 0.1);
+    --modal-btn-color: #188CE8;
   }
   
   body {
@@ -49,6 +50,8 @@
   button {
     cursor: pointer;
     border-radius: 4px;
+    padding: 0;
+    border: none;
   }
   
   .container {
@@ -771,12 +774,12 @@
     font-size: 16px;
     line-height: 1.87; 
     letter-spacing: 0.06em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);   
   }
 
   .spam-icon {    
     margin-left: 10px;
+    color: var(--accent-filters-color);  
   }
 
   /*----------modal--------*/
@@ -828,7 +831,6 @@
     fill: var(--accent-color);
   }
 
-
   .modal-title {
     margin-bottom: 30px;
     color: var(--header-text-color);
@@ -838,7 +840,7 @@
     text-align: center;
     letter-spacing: 0.03em;
   }
-
+ 
   .modal-input-wrap {
     position: relative;
   }
@@ -852,7 +854,7 @@
   }
 
   .modal-field {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .modal-input {
@@ -933,21 +935,7 @@
     height: 15px;
     border: 2px solid var(--header-text-color);
     border-radius: 2px;  
-  }
-
-  /*.modal-check-text::before {
-    content: '';
-    display: block;
-    margin-right: 8px;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--header-text-color);
-    border-radius: 2px;   
-  }
-
-  .modal-check:checked + .modal-check-text::before {
-    background-color: var(--accent-color);
-  }*/
+  }  
 
   .modal-check-link {
     display: flex;
@@ -970,21 +958,24 @@
     fill: var(--accent-filters-color);
   }
 
-  .modal-btn {
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    color: var(--accent-filters-color);
-    
+  .modal-btn {    
+    text-align: center;    
+    margin-left: auto;
+    margin-right: auto;     
+    min-width: 200px;
+    height: 50px;
+    color: var(--accent-filters-color); 
+    background: var(--modal-btn-color);      
     font-weight: bold;
     font-size: 16px;
     line-height: 1.87;   
-    letter-spacing: 0.06em;    
-    min-width: 200px;
-    height: 50px;  
-    background: #188CE8;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;  
+    letter-spacing: 0.06em;   
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);           
+  }
+
+  .modal-btn:hover,
+  .modal-btn:focus {    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
   }
 
   .modal-btn-submit {
