@@ -728,7 +728,7 @@
     text-transform: uppercase;        
   }
 
-  .footer-spam-input {
+  .footer-form {
     display: flex;                 
   }
 
@@ -818,14 +818,13 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   } 
   
-  .modal-close-btn:hover + .modal-close-icon {
+  .modal-close-btn:hover .modal-close-icon  {
     fill: var(--accent-color);
   }    
   
-  .modal-close-btn:focus + .modal-close-icon {
+  .modal-close-btn:focus .modal-close-icon {
     fill: var(--accent-color);
-  }    
-  
+  }      
 
   /*-----modal-form-----*/
   
