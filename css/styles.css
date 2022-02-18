@@ -915,7 +915,7 @@
   }  
 
   .modal-comment:focus {
-    border-color: var(--accent-color)
+    border-color: var(--accent-color);
   }
 
   .modal-check {
